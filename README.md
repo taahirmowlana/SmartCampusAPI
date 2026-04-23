@@ -1,8 +1,8 @@
 # Smart Campus Sensor & Room Management API
 
 # Module: 5COSC022W Client-Server Architectures 
-#**Student Name:** Taahir Mowalna  
-#**Student ID:** 20242154/w2153133  
+#Student Name: Taahir Mowalna  
+#Student ID: 20242154/w2153133  
 
 ## Project Overview
 The Smart Campus API is a robust, high-performance RESTful web service designed to serve as the backend infrastructure for a university "Smart Campus" initiative. It acts as the centralized system for tracking physical facilities (Rooms) and monitoring the diverse array of hardware components (Sensors) deployed within them, such as CO2 monitors and occupancy trackers. 

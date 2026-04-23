@@ -36,9 +36,11 @@ The architecture features an in-memory thread-safe data vault (`ConcurrentHashMa
 
 ### Part 1: Service Architecture & Setup
 **Q: Explain the default lifecycle of a JAX-RS Resource class. Is a new instance instantiated for every incoming request, or does the runtime treat it as a singleton? Elaborate on how this architectural decision impacts the way you manage and synchronize your in-memory data structures.**
+
 By default, JAX-RS treats resource classes as per-request. A brand new instance of the resource class is instantiated for every single incoming HTTP request, and it is destroyed after the response is sent. Because of this, we cannot store state in standard instance variables (like a standard `HashMap` or `ArrayList`), as the data would be wiped on the next request. To prevent data loss and race conditions across multiple simultaneous requests, our in-memory data structures must be declared as `static` and we must use thread-safe implementations, such as `ConcurrentHashMap`, to ensure atomic operations and safe concurrent access.
 
 **Q: Why is the provision of "Hypermedia" (HATEOAS) considered a hallmark of advanced RESTful design? How does this approach benefit client developers?**
+
 HATEOAS (Hypermedia as the Engine of Application State) transforms an API from a static directory into a dynamic, self-navigating system. By including navigation links within the JSON responses, client developers do not need to hardcode URLs or constantly refer to static, out-of-date documentation. The client can dynamically discover available endpoints and actions based on the current state of the resource, making the overall system much more resilient to future URL routing changes.
 
 ### Part 2: Room Management

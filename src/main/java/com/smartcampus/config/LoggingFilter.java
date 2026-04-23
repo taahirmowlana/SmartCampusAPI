@@ -1,4 +1,4 @@
-package com.smartcampus;
+package com.smartcampus.config;
 
 import javax.ws.rs.container.*;
 import javax.ws.rs.ext.Provider;

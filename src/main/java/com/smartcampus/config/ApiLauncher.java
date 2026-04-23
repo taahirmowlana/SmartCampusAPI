@@ -1,5 +1,6 @@
-package com.smartcampus;
+package com.smartcampus.config;
 
+import com.smartcampus.config.RestConfig;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;

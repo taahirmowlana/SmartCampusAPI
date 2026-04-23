@@ -1,5 +1,13 @@
-package com.smartcampus;
+package com.smartcampus.config;
 
+import com.smartcampus.exceptions.RoomNotEmptyMapper;
+import com.smartcampus.exceptions.GlobalExceptionMapper;
+import com.smartcampus.exceptions.LinkedResourceNotFoundMapper;
+import com.smartcampus.exceptions.SensorUnavailableMapper;
+import com.smartcampus.resources.SensorReadingResource;
+import com.smartcampus.resources.SensorResource;
+import com.smartcampus.resources.DiscoveryResource;
+import com.smartcampus.resources.RoomResource;
 import org.glassfish.jersey.server.ResourceConfig;
 import javax.ws.rs.ApplicationPath;
 

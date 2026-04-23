@@ -1,5 +1,8 @@
-package com.smartcampus;
+package com.smartcampus.db;
 
+import com.smartcampus.models.SensorReading;
+import com.smartcampus.models.Sensor;
+import com.smartcampus.models.Room;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
 import java.util.List;

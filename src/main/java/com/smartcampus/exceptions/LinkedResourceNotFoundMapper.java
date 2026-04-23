@@ -1,14 +1,14 @@
-package com.smartcampus;
+package com.smartcampus.exceptions;
 
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
 @Provider
-public class SensorUnavailableMapper implements ExceptionMapper<SensorUnavailableException> {
+public class LinkedResourceNotFoundMapper implements ExceptionMapper<LinkedResourceNotFoundException> {
     @Override
-    public Response toResponse(SensorUnavailableException exception) {
-        return Response.status(Response.Status.FORBIDDEN)
+    public Response toResponse(LinkedResourceNotFoundException exception) {
+        return Response.status(422) 
                 .entity("{\"error\": \"" + exception.getMessage() + "\"}")
                 .type("application/json").build();
     }

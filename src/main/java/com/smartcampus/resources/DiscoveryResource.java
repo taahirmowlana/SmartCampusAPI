@@ -1,4 +1,4 @@
-package com.smartcampus;
+package com.smartcampus.resources;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

@@ -1,4 +1,4 @@
-package com.smartcampus;
+package com.smartcampus.exceptions;
 
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;

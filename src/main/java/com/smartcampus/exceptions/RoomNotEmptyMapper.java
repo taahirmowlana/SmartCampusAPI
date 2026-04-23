@@ -1,14 +1,14 @@
-package com.smartcampus;
+package com.smartcampus.exceptions;
 
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
 @Provider
-public class LinkedResourceNotFoundMapper implements ExceptionMapper<LinkedResourceNotFoundException> {
+public class RoomNotEmptyMapper implements ExceptionMapper<RoomNotEmptyException> {
     @Override
-    public Response toResponse(LinkedResourceNotFoundException exception) {
-        return Response.status(422) 
+    public Response toResponse(RoomNotEmptyException exception) {
+        return Response.status(Response.Status.CONFLICT)
                 .entity("{\"error\": \"" + exception.getMessage() + "\"}")
                 .type("application/json").build();
     }

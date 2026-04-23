@@ -1,5 +1,8 @@
-package com.smartcampus;
+package com.smartcampus.resources;
 
+import com.smartcampus.db.CampusMemoryDB;
+import com.smartcampus.exceptions.RoomNotEmptyException;
+import com.smartcampus.models.Room;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

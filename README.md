@@ -30,27 +30,37 @@ This project is built strictly using the JAX-RS (Jakarta RESTful Web Services) s
 
 ## Sample cURL Commands
 1. Discovery Endpoint (HATEOAS)
+'''bash 
 curl -X GET http://localhost:8081/api/v1/
+'''
 
 2. Create a New Room
+'''bash
 curl -X POST http://localhost:8081/api/v1/rooms \
 -H "Content-Type: application/json" \
 -d "{\"name\": \"Tony Stark's Workshop\", \"capacity\": 10}"
+'''
 
 3. Register a New Sensor
 (Replace ROOM-ID with the ID generated from the previous step)
+'''bash
 curl -X POST http://localhost:8081/api/v1/sensors \
 -H "Content-Type: application/json" \
 -d "{\"type\": \"CO2\", \"status\": \"ACTIVE\", \"roomId\": \"ROOM-ID\"}"
+'''
 
 4. Log a New Sensor Reading (Sub-Resource)
 (Replace SENS-ID with the ID from the previous step)
+'''bash
 curl -X POST http://localhost:8081/api/v1/sensors/SENS-ID/readings \
 -H "Content-Type: application/json" \
 -d "{\"value\": 415.5}"
+'''
 
 5. Filter Sensors by Type
+'''bash
 curl -X GET http://localhost:8081/api/v1/sensors?type=CO2
+'''
 
 ## Conceptual Report: Smart Campus API
 Part 1: Service Architecture & Setup

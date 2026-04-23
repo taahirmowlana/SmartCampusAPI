@@ -32,8 +32,7 @@ The architecture features an in-memory thread-safe data vault (`ConcurrentHashMa
 **5. Filter Sensors by Type**
 `curl -X GET http://localhost:8081/api/v1/sensors?type=CO2`
 
-## Conceptual Report
-**## Conceptual Report: Smart Campus API
+## Conceptual Report: Smart Campus API
 
 ### Part 1: Service Architecture & Setup
 **Q: Explain the default lifecycle of a JAX-RS Resource class. Is a new instance instantiated for every incoming request, or does the runtime treat it as a singleton? Elaborate on how this architectural decision impacts the way you manage and synchronize your in-memory data structures.**

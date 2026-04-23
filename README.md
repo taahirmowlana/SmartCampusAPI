@@ -34,8 +34,7 @@ Check the output console for the "Jarvis Systems Online" confirmation. The API w
 Sample cURL Commands
 
 1. Discovery Endpoint (HATEOAS)
-
-Bash
+'''Bash
 curl -X GET http://localhost:8081/api/v1/
 
 2. Create a New Room

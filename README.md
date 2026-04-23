@@ -1,5 +1,38 @@
 # Smart Campus Sensor & Room Management API
 
+# Module: 5COSC022W Client-Server Architectures 
+**Student Name:** Taahir Mowalna  
+**Student ID:** 20242154/w2153133  
+
+## Project Overview
+The Smart Campus API is a robust, high-performance RESTful web service designed to serve as the backend infrastructure for a university "Smart Campus" initiative. It acts as the centralized system for tracking physical facilities (Rooms) and monitoring the diverse array of hardware components (Sensors) deployed within them, such as CO2 monitors and occupancy trackers. 
+
+This project is built strictly using the JAX-RS (Jakarta RESTful Web Services) specification. To ensure high performance and strict adherence to coursework constraints (no external databases like SQL Server), the system utilizes a custom, thread-safe, in-memory singleton data store leveraging `ConcurrentHashMap` and `CopyOnWriteArrayList` to handle concurrent HTTP requests safely.
+
+## Technology Stack
+* **Language:** Java
+* **Build Tool:** Maven
+* **Framework:** JAX-RS / Jersey
+* **Deployment Target:** Embedded Grizzly HTTP Server
+* **Data Storage:** In-memory collections only (`ConcurrentHashMap`)
+
+## Base URL
+`http://localhost:8081/api/v1`
+
+## How To Build And Run
+1. Clone the repository to your local machine.
+2. Open the project folder in Apache NetBeans IDE. Allow NetBeans a moment to resolve the Maven dependencies.
+3. In the Projects explorer, navigate to `Source Packages` -> `com.smartcampus.config`.
+4. Right-click the `ApiLauncher.java` file and select **Run File**.
+5. Check the output console for the "Jarvis Systems Online" confirmation.
+6. Open the discovery endpoint in your browser or Postman: `http://localhost:8081/api/v1`
+
+## Sample curl Commands
+
+**Discovery endpoint**
+```bash
+curl -X GET http://localhost:8081/api/v1/
+
 ## Overview
 This is a robust, highly available RESTful API developed for the university's "Smart Campus" initiative. Built entirely with Java and JAX-RS (Jersey), the API provides a seamless interface for campus facilities managers to track Rooms and monitor deep-nested IoT Sensor hardware (e.g., CO2 monitors, occupancy trackers). 
 
